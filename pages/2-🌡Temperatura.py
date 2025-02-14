@@ -9,7 +9,7 @@ st.set_page_config(
 )
 
 if "date" not in st.session_state:
-    df_temp = pd.read_excel("dataset/temperatura.xlsx")
+    df_temp = pd.read_excel("dataset\\temperatura.xlsx")
     st.session_state["date"] = df_temp
     
 df_temp = st.session_state["date"]

@@ -5,7 +5,7 @@ from PIL import Image
 
 st.set_page_config(
     page_title = "Alergênicos",
-    page_icon = "imagens/etiqueta-de-preco.png",
+    page_icon = "imagens\etiqueta-de-preco.png",
     layout= "wide"
 )
 
@@ -13,17 +13,17 @@ st.markdown("# Materiais Alergênicos ❗")
 
 
 if "data" not in st.session_state:
-    df_data = pd.read_excel("dataset/alergenicos.xlsx")
+    df_data = pd.read_excel("dataset\\alergenicos.xlsx")
     st.session_state["data"] = df_data
     
 df_data = st.session_state["data"]
 
 alergeno_imagens ={
-    "CEREAIS COM GLÚTEN": "imagens/Glútem.png",
-    "LEITE E DERIVADOS": "imagens/Leite.png",
-    "SULFITO": "imagens/Sulfito.png",
-    "SOJA E DERIVADOS": "imagens/Soja.png",
-    "PEIXE E DERIVADOS": "imagens/Peixe.png"
+    "CEREAIS COM GLÚTEN": "imagens\Glútem.png",
+    "LEITE E DERIVADOS": "imagens\Leite.png",
+    "SULFITO": "imagens\Sulfito.png",
+    "SOJA E DERIVADOS": "imagens\Soja.png",
+    "PEIXE E DERIVADOS": "imagens\Peixe.png"
 }
 
 code = df_data["CÓDIGO"].value_counts().index
@@ -34,7 +34,7 @@ if not df_code.empty:
     # Mostrar informações do código selecionado
     st.dataframe(df_code)
 
-    # Criar lista de imagens para exib
+    # Criar lista de imagens para exibir
     imagens_para_exibir = []
     legendas = []
     for coluna, imagem_caminho in alergeno_imagens.items():
