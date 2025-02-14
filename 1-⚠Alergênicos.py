@@ -9,7 +9,8 @@ st.set_page_config(
     layout= "wide"
 )
 
-st.markdown("# Materiais Alergênicos ❗")
+st.markdown("# Materiais Alergênicos ⚠")
+st.divider()
 
 
 if "data" not in st.session_state:
@@ -27,13 +28,15 @@ alergeno_imagens ={
 }
 
 code = df_data["CÓDIGO"].value_counts().index
-cod = st.sidebar.selectbox("Código", code)
+cod = st.sidebar.selectbox(f"**Código**", code)
 df_code = df_data[(df_data["CÓDIGO"] == cod)]
 
 if not df_code.empty:
     # Mostrar informações do código selecionado
-    st.dataframe(df_code)
-
+    st.markdown(f"<h3>Código: {df_code['CÓDIGO'].iloc[0]}</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3> Material: {df_code['DESCRIÇÃO MATÉRIA-PRIMA'].iloc[0]}</h3>", unsafe_allow_html=True)
+    st.divider()
+    
     # Criar lista de imagens para exibir
     imagens_para_exibir = []
     legendas = []
@@ -50,9 +53,12 @@ if not df_code.empty:
                 imagem = Image.open(imagem_caminho)
                 st.image(imagem, caption=legenda, width=450)
     else:
-        st.info("Nenhum alérgeno identificado para este código, Porém não armazenar próximo de MP ou HALB com Alergênicos.")
+        st.markdown(
+            f"<h4 style='color: red;'>Nenhum alérgeno identificado para este código. Porém, não armazenar próximo de MP ou HALB com Alérgenos ❗</h4>", 
+            unsafe_allow_html=True)
+
 else:
-    st.error("Nenhum dado encontrado para o código selecionado.")
+    st.error(f"Nenhum dado encontrado para o código selecionado.")
 
 st.sidebar.markdown("Desenvolvido por [Jonathan Alves](https://www.linkedin.com/in/jonathan-alves-408283183/)")
 
