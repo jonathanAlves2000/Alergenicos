@@ -34,7 +34,7 @@ if not df_code.empty:
     # Mostrar informações do código selecionado
     st.dataframe(df_code)
 
-    # Criar lista de imagens para exibi
+    # Criar lista de imagens para exib
     imagens_para_exibir = []
     legendas = []
     for coluna, imagem_caminho in alergeno_imagens.items():
