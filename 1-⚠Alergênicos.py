@@ -13,7 +13,7 @@ st.markdown("# Materiais Alergênicos ❗")
 
 
 if "data" not in st.session_state:
-    df_data = pd.read_excel("dataset\alergenicos.xlsx")
+    df_data = pd.read_excel("alergenicos.xlsx")
     st.session_state["data"] = df_data
     
 df_data = st.session_state["data"]
