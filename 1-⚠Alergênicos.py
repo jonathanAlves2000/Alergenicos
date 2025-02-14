@@ -37,7 +37,7 @@ if not df_code.empty:
     st.markdown(f"<h3> Material: {df_code['DESCRIÇÃO MATÉRIA-PRIMA'].iloc[0]}</h3>", unsafe_allow_html=True)
     st.divider()
     
-    # Criar lista de imagens para exibir
+    # Criar lista de imagens para exibi
     imagens_para_exibir = []
     legendas = []
     for coluna, imagem_caminho in alergeno_imagens.items():
