@@ -5,7 +5,7 @@ from PIL import Image
 
 st.set_page_config(
     page_title = "Alergênicos",
-    page_icon = "imagens\etiqueta-de-preco.png",
+    page_icon = "imagens/etiqueta-de-preco.png",
     layout= "wide"
 )
 
