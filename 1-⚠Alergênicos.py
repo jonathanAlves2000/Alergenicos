@@ -19,11 +19,11 @@ if "data" not in st.session_state:
 df_data = st.session_state["data"]
 
 alergeno_imagens ={
-    "CEREAIS COM GLÚTEN": "imagens\\Glútem.png",
-    "LEITE E DERIVADOS": "imagens\\Leite.png",
-    "SULFITO": "imagens\\Sulfito.png",
-    "SOJA E DERIVADOS": "imagens\\Soja.png",
-    "PEIXE E DERIVADOS": "imagens\\Peixe.png"
+    "CEREAIS COM GLÚTEN": "imagens/Glútem.png",
+    "LEITE E DERIVADOS": "imagens/Leite.png",
+    "SULFITO": "imagens/Sulfito.png",
+    "SOJA E DERIVADOS": "imagens/Soja.png",
+    "PEIXE E DERIVADOS": "imagens/Peixe.png"
 }
 
 code = df_data["CÓDIGO"].value_counts().index
