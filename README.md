@@ -4,6 +4,9 @@ Este é um aplicativo simples feito em **Python** com **Streamlit** que permite 
 
 ---
 
+### 🔗 Acesse o app aqui:
+👉 [Clique para abrir o app](https://seu-link.streamlit.app)
+
 ## 🚀 Funcionalidades
 
 - 🔍 Busca de materiais por nome ou código
@@ -26,5 +29,5 @@ Este é um aplicativo simples feito em **Python** com **Streamlit** que permite 
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/.git
+
