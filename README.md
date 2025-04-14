@@ -5,7 +5,7 @@ Este é um aplicativo simples feito em **Python** com **Streamlit** que permite 
 ---
 
 ### 🔗 Acesse o app aqui:
-👉 [Clique para abrir o app]([https://seu-link.streamlit.app](https://alergenicos.streamlit.app/)]
+👉 ([https://seu-link.streamlit.app](https://alergenicos.streamlit.app/)
 
 ## 🚀 Funcionalidades
 
