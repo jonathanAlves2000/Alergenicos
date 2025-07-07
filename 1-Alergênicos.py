@@ -60,6 +60,8 @@ if not df_code.empty:
 else:
     st.error(f"Nenhum dado encontrado para o código selecionado.")
 
+st.sidebar.markdown("**Version 62**")
+st.divider()
 st.sidebar.markdown("Desenvolvido por [Jonathan Alves](https://www.linkedin.com/in/jonathan-alves-408283183/)")
 
 
